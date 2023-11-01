@@ -3,9 +3,9 @@ VAR
     x : real;
     y : real;
     z : boolean;
-INIT x >= 0 & x < 1;
+INIT x = 1.5;
 
-INIT y = 0;
+INIT y = 2;
 INIT z = FALSE;
 
 TRANS TRUE -> case
