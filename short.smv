@@ -9,10 +9,8 @@ INIT y = 2;
 INIT z = FALSE;
 
 TRANS TRUE -> case
-                    x >= 1 : next(x) = x & next(y) = y & next(z) = FALSE;
                     x - y <= 0 : next(x) = x & next(y) = y & next(z) = TRUE;
                     x - y <= 0.2 : next(x) = x * y & next(y) = y + 0.02 & next(z) = FALSE;
                     x - y > 0.2 : next(x) = x * y & next(y) = y + 0.1 & next(z) = FALSE;
-                    TRUE : next(x) = x & next(y) = y & next(z) = FALSE;
                 esac;
 LTLSPEC F(z = TRUE);
